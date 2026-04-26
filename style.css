@@ -177,7 +177,7 @@ body {
 
 .workspace {
   display: flex;
-  gap: 0;
+  gap: 8px;
   padding: 8px;
   background: #e8e8e8;
   min-height: 320px;
@@ -239,45 +239,32 @@ textarea[readonly] {
   color: #222;
 }
 
-.mid-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  flex-shrink: 0;
-}
-
-.arrow-box {
-  width: 30px;
-  height: 30px;
-  background: linear-gradient(to bottom, #f8f8f8 0%, #dcdcdc 100%);
-  border: 1px solid #888;
-  border-top-color: #ddd;
-  border-left-color: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  color: #333;
-  border-radius: 2px;
-}
 
 .statusbar {
   background: linear-gradient(to bottom, #e8e8e8 0%, #d8d8d8 100%);
   border-top: 1px solid #bbb;
   display: flex;
   align-items: stretch;
-  height: 22px;
+  min-height: 22px;
   font-size: 11px;
   color: #333;
+  flex-wrap: wrap;
 }
 
 .status-segment {
-  padding: 0 10px;
+  padding: 3px 10px;
   display: flex;
   align-items: center;
-  border: 1px inset transparent;
   border-right: 1px solid #bbb;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+#statusMsg {
+  flex: 1;
+  min-width: 120px;
 }
 
 .status-sep {
@@ -322,6 +309,7 @@ textarea[readonly] {
   border-top-color: #888;
   border-left-color: #888;
   margin: 8px;
+  max-height: calc(80vh - 100px);
 }
 
 .legend-table {
@@ -339,6 +327,7 @@ textarea[readonly] {
   color: #333;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
 .legend-table td {
@@ -425,13 +414,21 @@ textarea.error-shake {
 @media (max-width: 600px) {
   .workspace {
     flex-direction: column;
-  }
-  .mid-col {
-    width: auto;
-    height: 32px;
-    flex-direction: row;
+    gap: 6px;
   }
   .menubar {
     display: none;
+  }
+  .status-version {
+    display: none;
+  }
+  #statusMode {
+    display: none;
+  }
+  .status-sep {
+    display: none;
+  }
+  #app {
+    box-shadow: none;
   }
 }

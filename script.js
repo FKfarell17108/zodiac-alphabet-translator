@@ -80,7 +80,6 @@ const inputCount  = document.getElementById('inputCount');
 const outputCount = document.getElementById('outputCount');
 const statusMsg   = document.getElementById('statusMsg');
 const statusMode  = document.getElementById('statusMode');
-const arrowIndicator = document.getElementById('arrowIndicator');
 const toast       = document.getElementById('toast');
 
 function encode(text) {
@@ -142,7 +141,6 @@ encodeBtn.addEventListener('click', function() {
   }
   outputText.value = encode(raw);
   updateCount(outputText, outputCount);
-  arrowIndicator.textContent = '\u2192';
   statusMode.textContent = 'Encode mode';
   setStatus('Encoded successfully. ' + outputText.value.length + ' chars output.');
 });
@@ -156,7 +154,6 @@ decodeBtn.addEventListener('click', function() {
   }
   outputText.value = decode(raw);
   updateCount(outputText, outputCount);
-  arrowIndicator.textContent = '\u2190';
   statusMode.textContent = 'Decode mode';
   setStatus('Decoded successfully. ' + outputText.value.length + ' chars output.');
 });
@@ -166,7 +163,6 @@ clearBtn.addEventListener('click', function() {
   outputText.value = '';
   updateCount(inputText, inputCount);
   updateCount(outputText, outputCount);
-  arrowIndicator.textContent = '\u2192';
   setStatus('Cleared.');
   inputText.focus();
 });
