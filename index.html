@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zodiac Alphabet Translator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <div class="titlebar">
+    <div class="titlebar-left">
+      <span class="titlebar-icon">✦</span>
+      <span class="titlebar-text">Zodiac Alphabet Translator</span>
+    </div>
+    <div class="titlebar-buttons">
+      <span class="tbtn">&#x2015;</span>
+      <span class="tbtn">&#x25A1;</span>
+      <span class="tbtn tbtn-close">&#x2715;</span>
+    </div>
+  </div>
+
+  <div class="menubar">
+    <span class="menu-item">File</span>
+    <span class="menu-item">Edit</span>
+    <span class="menu-item menu-active">Tools</span>
+    <span class="menu-item">Help</span>
+  </div>
+
+  <div class="toolbar">
+    <button class="tool-btn" id="encodeBtn">&#x25B6; Encode</button>
+    <button class="tool-btn" id="decodeBtn">&#x25C0; Decode</button>
+    <div class="toolbar-sep"></div>
+    <button class="tool-btn" id="clearBtn">&#x2715; Clear</button>
+    <button class="tool-btn" id="copyBtn">&#x2398; Copy Result</button>
+    <div class="toolbar-sep"></div>
+    <button class="tool-btn" id="legendBtn">&#x2606; Symbol Map</button>
+  </div>
+
+  <div class="workspace">
+
+    <div class="pane">
+      <div class="pane-header">
+        <span class="pane-title">Input Text</span>
+        <span class="pane-count" id="inputCount">0 chars</span>
+      </div>
+      <textarea id="inputText" placeholder="Type plain text or zodiac symbols here..."></textarea>
+    </div>
+
+    <div class="mid-col">
+      <div class="arrow-box" id="arrowIndicator">&#x2192;</div>
+    </div>
+
+    <div class="pane">
+      <div class="pane-header">
+        <span class="pane-title">Output</span>
+        <span class="pane-count" id="outputCount">0 chars</span>
+      </div>
+      <textarea id="outputText" readonly placeholder="Result appears here..."></textarea>
+    </div>
+
+  </div>
+
+  <div class="statusbar">
+    <div class="status-segment" id="statusMsg">Ready.</div>
+    <div class="status-sep"></div>
+    <div class="status-segment" id="statusMode">Encode mode</div>
+    <div class="status-sep"></div>
+    <div class="status-segment">Zodiac Alphabet v1.0</div>
+  </div>
+
+</div>
+
+<div class="overlay" id="legendOverlay">
+  <div class="legend-window">
+    <div class="titlebar">
+      <div class="titlebar-left">
+        <span class="titlebar-icon">&#x2609;</span>
+        <span class="titlebar-text">Symbol Map — Zodiac Alphabet</span>
+      </div>
+      <div class="titlebar-buttons">
+        <span class="tbtn tbtn-close" id="legendClose">&#x2715;</span>
+      </div>
+    </div>
+    <div class="legend-body">
+      <table class="legend-table" id="legendTable"></table>
+    </div>
+    <div class="legend-footer">
+      <button class="tool-btn" id="legendCloseBtn">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
