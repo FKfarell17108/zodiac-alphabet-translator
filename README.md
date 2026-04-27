@@ -1,6 +1,6 @@
 # ✦ Zodiac Alphabet Translator
 
-A simple web application that translates plain text (A–Z) into celestial symbols — planets, moons, and zodiac signs — based on a classic **Zodiac Alphabet** cipher system.
+A simple web application that translates plain text (A–Z) into celestial symbols - planets, moons, and zodiac signs - based on a classic **Zodiac Alphabet** cipher system.
 
 ---
 
@@ -10,8 +10,8 @@ The **Zodiac Alphabet Translator** is a web-based encoder and decoder that conve
 
 This tool works in two directions:
 
-- **Encode** — converts plain text (e.g. `HELLO`) into zodiac symbols (e.g. `♂♅♊♊♍`)
-- **Decode** — converts zodiac symbols back into readable plain text
+- **Encode** - converts plain text (e.g. `HELLO`) into zodiac symbols (e.g. `♂♅♊♊♍`)
+- **Decode** - converts zodiac symbols back into readable plain text
 
 Numbers, spaces, and punctuation are preserved as-is during translation. The encoder is case-insensitive, so both uppercase and lowercase letters are accepted.
 
@@ -42,7 +42,7 @@ Beyond the zodiac constellations, the system also incorporates **planetary symbo
 
 ---
 
-## The Zodiac Alphabet — Full Mapping
+## The Zodiac Alphabet - Full Mapping
 
 Below is the complete A–Z mapping used by this translator, based on the original **Zodiac Alphabet** cipher:
 
@@ -93,10 +93,10 @@ Below is the complete A–Z mapping used by this translator, based on the origin
 
 ```
 zodiac-alphabet-translator/
-├── index.html      — Main HTML structure
-├── style.css       — Retro Windows-style stylesheet
-├── script.js       — Encode/decode logic and UI interactions
-└── README.md       — This file
+├── index.html      - Main HTML structure
+├── style.css       - Retro Windows-style stylesheet
+├── script.js       - Encode/decode logic and UI interactions
+└── README.md       - This file
 ```
 
 ---
